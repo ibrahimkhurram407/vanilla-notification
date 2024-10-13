@@ -1,0 +1,54 @@
+/* Basic styles for notification */
+#notification-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px;
+    z-index: 1000;
+}
+
+.notification {
+    display: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    animation: slideDownUp 4s ease-in-out forwards;
+}
+
+.notification.info {
+    background-color: #007bff;
+}
+
+.notification.warning {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.notification.error {
+    background-color: #dc3545;
+}
+
+@keyframes slideDownUp {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    90% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
